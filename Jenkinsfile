@@ -10,7 +10,7 @@ pipeline {
         
         stage('Deploy to Tomcat ') {
             steps {
-                sh 'sudo -S cp /var/lib/jenkins/workspace/Task 1 (Build using Maven)/target/simpleweb.war  /var/lib/tomcat9/webapps'
+                sh 'sudo -S cp /var/lib/jenkins/workspace/Task1BuildusingMaven/target/simpleweb.war  /var/lib/tomcat9/webapps'
             }
         }
         
