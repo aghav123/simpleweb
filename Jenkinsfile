@@ -1,6 +1,6 @@
 pipeline {
     agent any
-        stage('Build') {
+        stages ('Build') {
             steps {
                 // Use Maven to build the Java code
                 sh 'mvn clean package'
