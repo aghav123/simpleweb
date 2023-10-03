@@ -1,11 +1,9 @@
 # Use the official Tomcat base image
 FROM tomcat:latest
 
-# Create a directory to copy the WAR file
-WORKDIR /usr/local/tomcat/webapps
-
+WORKDIR /root/simpleweb/target
 # Copy the WAR file into the webapps directory
-COPY simpleweb.war .
+COPY simpleweb.war /usr/local/tomcat/webapps/
 
 # Optional: Expose the port (default is 8080)
 EXPOSE 8080
@@ -13,4 +11,6 @@ EXPOSE 8080
 # Start Tomcat
 CMD ["catalina.sh", "run"]
 
+
+~                                
   
