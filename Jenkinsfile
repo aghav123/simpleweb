@@ -4,7 +4,7 @@ pipeline {
         stage ('Build') {
             steps {
                 // Use Maven to build the Java code
-                sh 'mvn clean package'
+                sh 'mvn package'
             }
         }
     }
