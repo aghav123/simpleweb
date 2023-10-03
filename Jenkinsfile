@@ -9,11 +9,4 @@ pipeline {
         }
     }
 }
-    post {
-        success {
-            // Add any post-build actions upon success
-            echo 'Build successful!'
-
-    }
-}
-
+  
