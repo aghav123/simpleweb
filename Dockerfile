@@ -1,12 +1,18 @@
+pipeline {
+    agent any
+        stage('Build') {
+            steps {
+                // Use Maven to build the Java code
+                sh 'mvn clean package'
+            }
+        }
+    }
 
-# Use the official Tomcat base image
-FROM tomcat:latest
+    post {
+        success {
+            // Add any post-build actions upon success
+            echo 'Build successful!'
 
-# Copy the WAR file into the webapps directory
-COPY ./target/*.war /usr/local/tomcat/webapps/
+    }
+}
 
-# Optional: Expose the port (default is 8080)
-EXPOSE 8080
-
-# Start Tomcat
-CMD ["catalina.sh", "run"]
