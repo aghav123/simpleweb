@@ -1,0 +1,19 @@
+---
+- name: Build and push Docker image to Docker Hub
+  hosts: localhost
+  tasks:
+    - name: Build the Docker image
+      community.docker.docker_image:
+        source: build
+        build:
+          path: /home/karan/Desktop/simpleweb
+        name: karan555/karan:1  # Replace with your Docker Hub username and image name
+        tag: "1"
+
+    - name: Push the Docker image to Docker Hub
+      community.docker.docker_image:
+        name: karan555/karan:1  # Replace with your Docker Hub username and image name
+        push: true
+        source: local
+
+
