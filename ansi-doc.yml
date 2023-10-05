@@ -7,19 +7,19 @@
         source: build
         build:
           path: /home/karan/Desktop/simpleweb
-        name: karan555/karan:1  # Replace with your Docker Hub username and image name
+        name: karan555/karan:1  
         tag: "1"
 
     - name: Push the Docker image to Docker Hub
       community.docker.docker_image:
-        name: karan555/karan:1  # Replace with your Docker Hub username and image name
+        name: karan555/karan:1 
         push: true
         source: local
 
     - name: Run Docker container using the pushed image
       community.docker.docker_container:
-        name: my_container  # Give your container a name
-        image: karan555/karan:1  # Use the same image name and tag
+        name: my_container  
+        image: karan555/karan:1  
         state: started
         ports:
           - "9000:80"
