@@ -6,7 +6,7 @@ WORKDIR /root/simpleweb/target
 COPY ./target/*.war /usr/local/tomcat/webapps/
 
 # Optional: Expose the port (default is 8080)
-EXPOSE 8080
+EXPOSE 9000
 
 # Start Tomcat
 CMD ["catalina.sh", "run"]
