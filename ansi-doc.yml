@@ -22,6 +22,6 @@
         image: karan555/karan:1  
         state: started
         ports:
-          - "9000:80"
+          - "9000:8080"
 
                                       
